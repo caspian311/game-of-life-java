@@ -12,6 +12,8 @@ public class DisplayTest {
 	private IDisplay testObject;
 	private ByteArrayOutputStream out;
 	
+	private static final String LINE_ENDING = System.getProperty("line.separator");
+	
 	@Before
 	public void setUp() {
 		out = new ByteArrayOutputStream();
@@ -27,7 +29,7 @@ public class DisplayTest {
 		Board emptyBoard = new Board(new boolean[1][1]);
 		testObject.showBoard(emptyBoard);
 		
-		assertEquals("| |\n\n", getWrittenOutput());
+		assertEquals("| |" + LINE_ENDING + LINE_ENDING, getWrittenOutput());
 	}
 
 	@Test
@@ -35,7 +37,7 @@ public class DisplayTest {
 		Board emptyBoard = new Board(new boolean[][] {{true}});
 		testObject.showBoard(emptyBoard);
 		
-		assertEquals("|*|\n\n", getWrittenOutput());
+		assertEquals("|*|" + LINE_ENDING + LINE_ENDING, getWrittenOutput());
 	}
 	
 	@Test
@@ -43,7 +45,7 @@ public class DisplayTest {
 		Board empty3x3Board = new Board(new boolean[3][3]);
 		testObject.showBoard(empty3x3Board);
 		
-		assertEquals("|   |\n|   |\n|   |\n\n", getWrittenOutput());
+		assertEquals("|   |" + LINE_ENDING + "|   |" + LINE_ENDING + "|   |" + LINE_ENDING + LINE_ENDING, getWrittenOutput());
 	}
 	
 	@Test
@@ -61,6 +63,6 @@ public class DisplayTest {
 		Board empty3x3Board = new Board(full);
 		testObject.showBoard(empty3x3Board);
 		
-		assertEquals("|*  |\n| * |\n|  *|\n\n", getWrittenOutput());
+		assertEquals("|*  |" + LINE_ENDING + "| * |" + LINE_ENDING + "|  *|" + LINE_ENDING + LINE_ENDING, getWrittenOutput());
 	}
 }
