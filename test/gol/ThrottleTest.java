@@ -19,7 +19,7 @@ public class ThrottleTest {
 			}
 		}).start();
 		
-		Thread.sleep(timeToWait + 10);
+		Thread.sleep(timeToWait + 50);
 		
 		assertTrue(flag.isSet);
 	}
