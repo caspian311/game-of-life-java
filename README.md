@@ -9,7 +9,7 @@ For the rules and other details on GoL, please visit the [Wikipedia page](http:/
 
 ###What's next?###
 
-No real roadmap for what to do next with it.  Maybe a build file (ant or maven) maybe not. It currently only displays to the console but it'd be nice to have a UI component that used like a Swing dipslay. 
+No real roadmap for what to do next with it.  Maybe a build file (ant or maven) maybe not. It currently only displays to the console but it'd be nice to have a UI component that used like a Swing display. 
 
 
 Pull requests welcome.
